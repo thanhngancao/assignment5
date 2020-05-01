@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Menu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<script type="text/javascript" src="js/script.js"></script> 
+	<script type="text/javascript">
+		var imgcheck = 'n';
+        function Change1(){ /*thay doi hinh anh*/
+            var image = document.getElementById('h1');
+            if(imgcheck == 'n'){
+                image.src = 'images/1280px-Matterhorn_from_Domhütte_-_2.jpg';/*hinh duoc doi thanh*/
+                imgcheck = 'p';
+            }
+            else{
+                image.src = 'images/cantons.gif';
+                imgcheck = 'n';
+            }
+        }
+
+        function Change2(){ 
+            var image = document.getElementById('h2');
+            if(imgcheck == 'n'){
+                image.src = 'images/Jungfraujoch-Switzerland_thumb.jpg'; 
+                imgcheck = 'p';
+            }
+            else{
+                image.src = 'images/Switzerland-village_1369729.jpg';
+                imgcheck = 'n';
+            }
+        }
+
+        function Change3(){ 
+            var image = document.getElementById('h3');
+            if(imgcheck == 'n'){
+                image.src = 'images/happy-friends-switzerland-768x512.jpg';
+                imgcheck = 'p';
+            }
+            else{
+                image.src = 'images/93476729_278316443159713_4730855645606051840_n.jpg';
+                imgcheck = 'n';
+            }
+        }
+	</script>
+</head>
+<body>
+    <header>
+		<a href="#" class="swit">Switzerland's Review</a>
+		<div class="menu-toggle"></div>
+		<nav>
+			<ul>
+				<li><a href="#" class="active">Home</a></li>
+				<li><a href="#">Review</a></li>
+				<li><a href="#" id="comments">Comment</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="clearfloat"></div>
+	</header>
+	<div class="container">
+		<h3>If you have the others thinking about Switzerland, you can comment!</h3>
+		<hr>
+		<h3>About you</h3>
+		<span>User Name:</span>
+		<input type="text" id="inUserName">
+		<span>Password:</span>
+		<input type="text" id="inPassword">
+		<span>Email:</span>
+		<input type="text" id="inEmail">
+		<span>Your Comment:</span>
+		<input type="text" id="inComment">
+        <button id="btnSend">Send</button>
+		<hr>
+		<h3>Check</h3>
+		<span>User Name:</span>
+		<input type="text" id="inUserName2">
+		<button id="btnRead">Get Information</button>
+		<span id="result"></span>
+		<hr>
+		<!--<h3>U</h3>
+		<span>User Name:</span>
+		<input type="text" id="inUserName3">
+		<span>Password:</span>
+		<input type="text" id="inPwd">
+		<span>Email:</span>
+		<input type="text" id="inEmail">
+		<span>Phone:</span>
+		<input type="text" id="inPhone">
+		<button id="btnUpd">Update User</button>
+		<hr>
+		<h3>D</h3>
+		<span>User Name:</span>
+		<input type="text" id="inUserName4">
+		<button id="btnDel">Delete User</button>
+		<hr>-->
+		<p>Status: <span id="status"></span></p>
+	</div>
+	<div class="image">
+		<img class="image1 n" src="images/cantons.gif" alt="" id="h1" onclick="Change1();">
+		<img class="image2 n" src="images/Switzerland-village_1369729.jpg" alt="" id="h2" onclick="Change2();">
+		<img class="image3 n" src="images/93476729_278316443159713_4730855645606051840_n.jpg" alt="" id="h3" onclick="Change3();">
+	</div>
+</body>
+</html>
